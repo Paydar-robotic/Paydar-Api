@@ -2,7 +2,7 @@ package.path = package.path..';.luarocks/share/lua/5.2/?.lua;.luarocks/share/lua
 package.cpath = package.cpath..';.luarocks/lib/lua/5.2/?.so'
 bot_token = "Tokan"
 send_api = "https://api.telegram.org/bot"..bot_token
-sudo_id = 377450049
+sudo_id = 104657260
 http = require('socket.http')
 https = require('ssl.https')
 URL = require('socket.url')
@@ -177,24 +177,24 @@ function create_config( )
 	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo :\27[0;39;49m')
 	local SUDO = tonumber(io.read())
 if not tostring(SUDO):match('%d+') then
-    SUDO = 377450049
+    SUDO = 104657260
   end
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
     "MRCore"
     },
-    sudo_users = {377450049, SUDO},--Sudo users
+    sudo_users = {104657260, SUDO},--Sudo users
     master_id = SUDO, 
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[*》MaTaDoR Api V1.0*
+    info_text = [[*Paydar Api V1.0*
 *》Admins :*
-*》Founder & Developer :* [MahDiRoO](Telegram.Me/MahDiRoO)
+*》Founder & Developer :* [Omid Paydar](Telegram.Me/Omid_Paydar)
 
 *》Our channel :*
-》[MaTaDoRTeaM](Telegram.Me/matadorteam)
+》[PaydarTeam](Telegram.Me/PaydarTeam)
 ]],
   }
   serialize_to_file(config, './data/config.lua')
