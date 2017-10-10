@@ -1,5 +1,5 @@
-# [MaTaDoRApi v1.0](https://t.me/matadorteam)
-An advanced administration bot based on BDMessenger
+# [Paydar Api v1.0](https://t.me/PaydarTeam)
+An advanced administration bot based on Paydar robotic team
 
 * * *
 
@@ -13,8 +13,8 @@ An advanced administration bot based on BDMessenger
 ```sh
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/MaTaDoRTeaM/MaTaDoRapi.git
-cd MaTaDoRapi
+git clone https://github.com/Paydar-robotic/Paydar-Api.git
+cd Paydar-Api
 chmod +x matador.sh
 ./matador.sh install
 ./matador.sh 
@@ -29,14 +29,14 @@ tmux
 
 # Special thanks to
 
-`Beyond Team Members`
+`Paydar Team Members`
 
 * * *
 
 # Developers!
 
-[MahDiRoO](https://github.com/solid021) ([Telegram](https://t.me/MahDiRoO))
+[Omid Paydar]([Telegram](https://t.me/Omid_Paydar))
 
 ### Our Telegram Channel:
 
-[@MatadorTeam](https://t.me/matadorteam)
+[Paydar Team](https://t.me/paydarteam)
