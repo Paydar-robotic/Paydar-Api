@@ -1,4 +1,4 @@
-local n, v = "serpent", 0.28 -- (C) 2012-15 Paul Kulchenko; MIT License 
+local n, v = "serpent", 0.28 -- (C) 2012-15 Paul Kulchenko; MIT License  
 local c, d = "Paul Kulchenko", "Lua serializer and pretty printer"
 local snum = {[tostring(1/0)]='1/0 --[[math.huge]]',[tostring(-1/0)]='-1/0 --[[-math.huge]]',[tostring(0/0)]='0/0'}
 local badtype = {thread = true, userdata = true, cdata = true}
@@ -17,7 +17,7 @@ local function s(t, opts)
   local iname, comm = '_'..(name or ''), opts.comment and (tonumber(opts.comment) or math.huge)
   local seen, sref, syms, symn = {}, {'local '..iname..'={}'}, {}, 0
   local function gensym(val) return '_'..(tostring(tostring(val)):gsub("[^%w]",""):gsub("(%d%w+)",
-    -- tostring(val) is needed because __tostring may return a non-string value
+    -- tostring(val) is needed because __tostring may return a non-string value  
     function(s) if not syms[s] then symn = symn+1; syms[s] = symn end return tostring(syms[s]) end)) end
   local function safestr(s) return type(s) == "number" and tostring(huge and snum[tostring(s)] or s)
     or type(s) ~= "string" and tostring(s) -- escape NEWLINE/010 and EOF/026
