@@ -15,9 +15,9 @@ An advanced administration bot based on Paydar robotic team
 cd $HOME
 git clone https://github.com/Paydar-robotic/Paydar-Api.git
 cd Paydar-Api
-chmod +x matador.sh
-./matador.sh install
-./matador.sh 
+chmod +x paydar.sh
+./paydar.sh install
+./paydar.sh 
 
 
 # For Auto Launch:
