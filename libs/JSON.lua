@@ -35,7 +35,7 @@ local OBJDEF = {
 --
 --   JSON = assert(loadfile "JSON.lua")() -- one-time load of the routines
 --
---   local lua_value = JSON:decode(raw_json_text)
+--   local lua_value = JSON:decode(raw_json_text) 
 --
 --   local raw_json_text    = JSON:encode(lua_table_or_value)
 --   local pretty_json_text = JSON:encode_pretty(lua_table_or_value) -- "pretty printed" version for human readability
