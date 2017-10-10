@@ -713,4 +713,3 @@ msg.fwd_from.username = msg.forward_from.username
 end
 match_plugins(msg)
 end
-
