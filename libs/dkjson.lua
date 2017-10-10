@@ -7,7 +7,7 @@ local global_module_name = 'json'
 
 David Kolf's JSON module for Lua 5.1/5.2
 
-Version 2.5
+Version 2.5 
 
 
 For the documentation see the corresponding readme.txt or visit
