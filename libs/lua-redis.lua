@@ -371,7 +371,7 @@ function request.multibulk(client, command, ...)
     client.network.write(client, table.concat(buffer))
 end
 
--- ############################################################################
+-- ###########################################################################
 
 local function custom(command, send, parse)
     command = string.upper(command)
