@@ -113,7 +113,7 @@ local function plugin_exists( name )
 end
 
 local function list_all_plugins(only_enabled)
-  local tmp = '\n\n[MaTaDoRTeaM](Telegram.Me/MaTaDoRTeaM)'
+  local tmp = '\n\n[PaydarTeam](Telegram.Me/PaydarTeam)'
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
@@ -131,7 +131,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'.'..status..' '..check_markdown(v)..' \n'
     end
   end
-  local text = text..'\n\n'..nsum..' *📂plugins installed*\n\n'..nact..' _✔️plugins enabled_\n\n'..nsum-nact..' _❌plugins disabled_\n\n[MaTaDoRTeaM](Telegram.Me/MaTaDoRTeaM)'
+  local text = text..'\n\n'..nsum..' *📂plugins installed*\n\n'..nact..' _✔️plugins enabled_\n\n'..nsum-nact..' _❌plugins disabled_\n\n[PaydarTeam](Telegram.Me/PaydarTeam)'
   return text
 end
 
@@ -152,7 +152,7 @@ local function list_plugins(only_enabled)
       v = string.match (v, "(.*)%.lua")
     end
   end
-  local text = text.."\n_🔃All Plugins Reloaded_\n\n"..nact.." *✔️Plugins Enabled*\n"..nsum.." *📂Plugins Installed*\n\n[MaTaDoRTeaM](Telegram.Me/MaTaDoRTeaM)"
+  local text = text.."\n_🔃All Plugins Reloaded_\n\n"..nact.." *✔️Plugins Enabled*\n"..nsum.." *📂Plugins Installed*\n\n[PaydarTeam](Telegram.Me/PaydarTeam)"
 return text
 end
 
@@ -330,7 +330,7 @@ local function modlist(msg)
   if next(data[tostring(msg.to.id)]['mods']) == nil then
     return "_No_ *moderator* _in this group_"
 end
-   message = '*List of moderators :*\n'
+   message = '*List of Paydar :*\n'
   for k,v in pairs(data[tostring(msg.to.id)]['mods'])
 do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -405,7 +405,7 @@ local auto_leave = 'AutoLeaveBot'
     if msg.text then
   if msg.text:match("(.*)") then
     if not data[tostring(msg.to.id)] and not redis:get(auto_leave) and not is_admin(msg) then
-  send_msg(msg.to.id, "برای خرید ربات به پیوی \n@MahDiRoO\nمراجعه کنید.!", nil, "md")
+  send_msg(msg.to.id, "برای خرید ربات به پیوی \n@Omid_Paydar\nمراجعه کنید.!", nil, "md")
   leave_group(chat)
       end
    end
@@ -1351,7 +1351,7 @@ end
 local data = load_data(_config.moderation.data)
 local settings = data[tostring(target)]["settings"] 
 local mutes = data[tostring(target)]["mutes"]
-text = "*MαƬαƊσR SєƬƬιηgѕ :*\n🔐 `ƓяσUρ` #>Lσcк ` Lιѕт :`\n\n*>Lσcк edit :* "..settings.lock_edit.."\n*>Lσcк links :* "..settings.lock_link.."\n*>Lσcк tags :* "..settings.lock_tag.."\n*>Lσcк Join :* "..settings.lock_join.."\n*>Lσcк flood :* "..settings.flood.."\n*>Lσcк spam :* "..settings.lock_spam.."\n*>Lσcк mention :* "..settings.lock_mention.."\n*>Lσcк arabic :* "..settings.lock_arabic.."\n*>Lσcк webpage :* "..settings.lock_webpage.."\n*>Lσcк markdown :* "..settings.lock_markdown.."\n*>Lσcк all :* "..mutes.mute_all.."\n*>Lσcк gif :* "..mutes.mute_gif.."\n*>Lσcк text :* "..mutes.mute_text.."\n*>Lσcк photo :* "..mutes.mute_photo.."\n*>Lσcк video :* "..mutes.mute_video.."\n*>Lσcк audio :* "..mutes.mute_audio.."\n*>Lσcк voice :* "..mutes.mute_voice.."\n*>Lσcк sticker :* "..mutes.mute_sticker.."\n*>Lσcк contact :* "..mutes.mute_contact.."\n*>Lσcк forward :* "..mutes.mute_forward.."\n*>Lσcк location :* "..mutes.mute_location.."\n*>Lσcк document :* "..mutes.mute_document.."\n*>Lσcк TgService :* "..mutes.mute_tgservice.."\n*>Lσcк pin message :* "..settings.lock_pin.."\n=============\n💠 `ƓяσUρ` #OƬнƐя `SєттιηƓѕ :`\n\n*>Ɠяσυρ ƜєƖcσмє :* "..settings.welcome.."\n*>Ɓσтѕ Ƥяσтєcтιση :* "..settings.lock_bots.."\n*>ƑƖσσɗ Sєηѕιтινιту :* `"..settings.num_msg_max.."`\n*>ƑƖσσɗ Ƈнєcк Ƭιмє :* `"..settings.time_check.."`\n*>Ƈнαяαcтєя Sєηѕιтινιту :* `"..settings.set_char.."`\n\n=============\n🌐 `IηfσRмαƬιση :`\n\n*>Ɠяσυρ Ɲαмє :* "..(check_markdown(msg.to.title) or "").."\n*>Ɠяσυρ IƊ :* `"..msg.to.id.."`\n*>Ƴσυя Ɲαмє :* "..(check_markdown(msg.from.first_name) or "No ɳαɱҽ").."\n*>Ƴσυя IƊ :* `"..msg.from.id.."`\n*>Uѕєяηαмє :* @"..check_markdown(msg.from.username or "").."\n\n=============\n*>ƇнαηηєƖ :* @MaTaDoRTeaM\n*>Ƥσωєяєɗ Ɓу :* @MahDiRoO"
+text = "*MαƬαƊσR SєƬƬιηgѕ :*\n🔐 `ƓяσUρ` #>Lσcк ` Lιѕт :`\n\n*>Lσcк edit :* "..settings.lock_edit.."\n*>Lσcк links :* "..settings.lock_link.."\n*>Lσcк tags :* "..settings.lock_tag.."\n*>Lσcк Join :* "..settings.lock_join.."\n*>Lσcк flood :* "..settings.flood.."\n*>Lσcк spam :* "..settings.lock_spam.."\n*>Lσcк mention :* "..settings.lock_mention.."\n*>Lσcк arabic :* "..settings.lock_arabic.."\n*>Lσcк webpage :* "..settings.lock_webpage.."\n*>Lσcк markdown :* "..settings.lock_markdown.."\n*>Lσcк all :* "..mutes.mute_all.."\n*>Lσcк gif :* "..mutes.mute_gif.."\n*>Lσcк text :* "..mutes.mute_text.."\n*>Lσcк photo :* "..mutes.mute_photo.."\n*>Lσcк video :* "..mutes.mute_video.."\n*>Lσcк audio :* "..mutes.mute_audio.."\n*>Lσcк voice :* "..mutes.mute_voice.."\n*>Lσcк sticker :* "..mutes.mute_sticker.."\n*>Lσcк contact :* "..mutes.mute_contact.."\n*>Lσcк forward :* "..mutes.mute_forward.."\n*>Lσcк location :* "..mutes.mute_location.."\n*>Lσcк document :* "..mutes.mute_document.."\n*>Lσcк TgService :* "..mutes.mute_tgservice.."\n*>Lσcк pin message :* "..settings.lock_pin.."\n=============\n💠 `ƓяσUρ` #OƬнƐя `SєттιηƓѕ :`\n\n*>Ɠяσυρ ƜєƖcσмє :* "..settings.welcome.."\n*>Ɓσтѕ Ƥяσтєcтιση :* "..settings.lock_bots.."\n*>ƑƖσσɗ Sєηѕιтινιту :* `"..settings.num_msg_max.."`\n*>ƑƖσσɗ Ƈнєcк Ƭιмє :* `"..settings.time_check.."`\n*>Ƈнαяαcтєя Sєηѕιтινιту :* `"..settings.set_char.."`\n\n=============\n🌐 `IηfσRмαƬιση :`\n\n*>Ɠяσυρ Ɲαмє :* "..(check_markdown(msg.to.title) or "").."\n*>Ɠяσυρ IƊ :* `"..msg.to.id.."`\n*>Ƴσυя Ɲαмє :* "..(check_markdown(msg.from.first_name) or "No ɳαɱҽ").."\n*>Ƴσυя IƊ :* `"..msg.from.id.."`\n*>Uѕєяηαмє :* @"..check_markdown(msg.from.username or "").."\n\n=============\n*>ƇнαηηєƖ :* @PaydarTeam\n*>Ƥσωєяєɗ Ɓу :* @Omid_Paydar"
 text = string.gsub(text, "yes", "`Enable ✅`")
 text = string.gsub(text, "no", "`Disabled ❌`")
 return text
@@ -1446,7 +1446,7 @@ if matches[1] == "res" and matches[2] and not matches[2]:match('^%d+') and is_mo
 		local text = 'Username: '..usr_name..' \nUser ID: '..UID..'\nFirstName: '..fst_name..' \nLastName: '..lst_name..' \nBio: '..biotxt
 		return text
 end
-if matches[1] == 'matador' then
+if matches[1] == 'Paydar' then
 return _config.info_text
 end
 if matches[1] == 'ping' then
@@ -1964,7 +1964,7 @@ if matches[1] == 'newlink' and is_mod(msg) then
   end
   if matches[1] == "rules" then
  if not data[tostring(target)]['rules'] then
-     rules = "No Rules\n By @MahDiRoO"
+     rules = "No Rules\n By @Omid_Paydar"
         else
      rules = "*Group Rules :*\n"..data[tostring(target)]['rules']
       end
@@ -2000,13 +2000,13 @@ if matches[1] == 'newlink' and is_mod(msg) then
 		if matches[1]:lower() == 'clean' and is_owner(msg) then
 			if matches[2] == 'mods' then
 				if next(data[tostring(msg.to.id)]['mods']) == nil then
-					return "_No_ *moderators* _in this group_"
+					return "_No_ *Paydar* _in this group_"
             end
 				for k,v in pairs(data[tostring(msg.to.id)]['mods']) do
 					data[tostring(msg.to.id)]['mods'][tostring(k)] = nil
 					save_data(_config.moderation.data, data)
 				end
-				return "_All_ *moderators* _has been demoted_"
+				return "_All_ *Paydar* _has been demoted_"
          end
 			if matches[2] == 'filterlist' then
 				if next(data[tostring(msg.to.id)]['filterlist']) == nil then
@@ -2182,7 +2182,7 @@ end
 -------------Help-------------
 if matches[1] == "help" and is_mod(msg) then
     local text = [[
-*MaTaDoR Api Bot Commands:*
+*Paydar Api Bot Commands:*
 
 */add* 
 _Add Group To Database_
@@ -2284,7 +2284,7 @@ _Show Banned Users List_
 _Show Group Owners List_ 
 ➖➖➖➖➖➖
 */modlist* 
-_Show Group Moderators List_
+_Show Group Paydar List_
 ➖➖➖➖➖➖
 */whitelist* 
 _Show Group White List Users_
@@ -2312,8 +2312,8 @@ _Show Tools Help_
 
 
 _You Can Use_ *[!/]* _To Run The Commands_
-_This Help List Only For_ *Moderators/Owners!*
-_Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
+_This Help List Only For_ *Paydar/Owners!*
+_Its Means, Only Group_ *Paydar/Owners* _Can Use It!_
 
 *Good luck ;)*]]
     return text
@@ -2321,7 +2321,7 @@ _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 if matches[1] == "helptools" and is_admin(msg) then
     local text = [[
 
-_Sudoer And Admins MaTaDoR Api Bot Help :_
+_Sudoer And Admins Paydar Api Bot Help :_
 
 */visudo* `[username|id|reply]`
 _Add Sudo_
@@ -2914,11 +2914,11 @@ end
   if is_sudo(msg) then
 	if matches[1]:lower() == "sendfile" and matches[2] and matches[3] then
 		local send_file = "./"..matches[2].."/"..matches[3]
-		sendDocument(msg.to.id, send_file, msg.id, "@MaTaDoRTeaM")
+		sendDocument(msg.to.id, send_file, msg.id, "@PaydarTeam")
 	end
 	if matches[1]:lower() == "sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
-		sendDocument(msg.to.id, plug, msg.id, "@MaTaDoRTeaM")
+		sendDocument(msg.to.id, plug, msg.id, "@PaydarTeam")
     end
 	if matches[1]:lower() == "savefile" and matches[2]then
 	local fn = matches[2]:gsub('(.*)/', '')
@@ -3089,7 +3089,7 @@ setChatPhoto(msg.to.id, gpPhotoFile)
  if data[tostring(msg.to.id)]['rules'] then
 rules = data[tostring(msg.to.id)]['rules']
 else
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@MaTaDoRTeaM"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@PaydarTeam"
 end
 if msg.newuser.username then
 user_name = "@"..check_markdown(msg.newuser.username)
@@ -3171,7 +3171,7 @@ return {
     "^[!/](setfloodtime) (%d+)$",
     "^[!/](whois) (.*)$",
     "^[!/](rmsg) (%d+)$",
-	"^[!/](matador)$",
+	"^[!/](paydar)$",
 	"^[!/](ban) (.*)$",
     "^[!/](ban)$",
     "^[!/](unban) (.*)$",
